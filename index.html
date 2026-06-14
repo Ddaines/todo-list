@@ -4,23 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Список задач</h1>
+  <div class="app">
+    <header>
+      <div class="header-top">
+        <span class="emoji">✅</span>
+        <h1>Мои задачи</h1>
+      </div>
+      <p class="subtitle">Успевай всё важное</p>
+    </header>
 
-    <div class="input-box">
-      <input type="text" id="taskInput" placeholder="Введите задачу..." autocomplete="off"/>
-      <button id="addBtn">+</button>
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Новая задача..." autocomplete="off"/>
+      <button id="addBtn">Добавить</button>
+    </div>
+
+    <div class="list-header">
+      <span id="taskCount">Нет задач</span>
+      <button id="clearBtn">Удалить всё</button>
     </div>
 
     <ul id="taskList"></ul>
-
-    <div class="footer" id="footer">
-      <span id="taskCount">0 задач</span>
-      <button id="clearBtn">Очистить всё</button>
-    </div>
   </div>
 
   <script src="script.js"></script>
